@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Apple</title>
+<meta charset="UTF-8">
+<title>SoundBook</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Apple 🍎</h1>
+<h1>SoundBook</h1>
 
-<audio controls autoplay>
-  <source src="audio/apple.mp3" type="audio/mpeg">
-</audio>
+<h2>Proverbe</h2>
+<button onclick="playSound('proverbe1')">
+Qui vivra verra
+</button>
+
+<h2>Tag</h2>
+<button onclick="playSound('tag1')">Tag 1</button>
+<button onclick="playSound('tag2')">Tag 2</button>
+<button onclick="playSound('tag3')">Tag 3</button>
+
+<h2>Complétez l'exercice</h2>
+<button onclick="playSound('phrase1')">Phrase 1</button>
+<button onclick="playSound('phrase2')">Phrase 2</button>
+
+<h2>Et vous ?</h2>
+<button onclick="playSound('Et vous ?')">
+Et vous?
+</button>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
