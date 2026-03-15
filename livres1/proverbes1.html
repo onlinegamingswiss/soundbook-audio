@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Livre 1 – SoundBook</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Proverbe 1 – Livre 1 – SoundBook</title>
+  <link rel="stylesheet" href="../../style.css" />
 
   <!-- AdSense: remplace ton Publisher ID avant mise en ligne -->
   <!--
@@ -23,14 +23,14 @@
       <details class="dropdown-books">
         <summary class="action-button dropdown-button">Livres</summary>
         <div class="dropdown-menu">
-          <a href="livres1.html" class="dropdown-item">Livre 1</a>
-          <a href="livres2.html" class="dropdown-item">Livre 2</a>
-          <a href="livres3.html" class="dropdown-item">Livre 3</a>
+          <a href="../../livres1/proverbe1/proverbe1.html" class="dropdown-item">Livre 1</a>
+          <a href="../../livres2/proverbe1/proverbe1.html" class="dropdown-item">Livre 2</a>
+          <a href="../../livres3/proverbe1/proverbe1.html" class="dropdown-item">Livre 3</a>
         </div>
       </details>
 
-      <a href="achat.html" class="action-button action-button-primary">Achat</a>
-      <a href="contact.html" class="action-button action-button-secondary">Contact</a>
+      <a href="../../achat.html" class="action-button action-button-primary">Achat</a>
+      <a href="../../contact.html" class="action-button action-button-secondary">Contact</a>
     </section>
 
     <div class="separator" aria-hidden="true"></div>
@@ -42,9 +42,9 @@
     <section class="book-layout">
       <aside class="chapter-sidebar" aria-label="Liste des chapitres">
         <a href="#chapitre-1" class="chapter-button">Chapitre 1</a>
-        <a href="#chapitre-2" class="chapter-button">Chapitre 2</a>
-        <a href="#chapitre-3" class="chapter-button">Chapitre 3</a>
-        <a href="#chapitre-4" class="chapter-button">Chapitre 4</a>
+        <a href="../proverbe2/proverbe2.html" class="chapter-button">Chapitre 2</a>
+        <a href="../proverbe3/proverbe3.html" class="chapter-button">Chapitre 3</a>
+        <a href="../proverbe4/proverbe4.html" class="chapter-button">Chapitre 4</a>
       </aside>
 
       <section class="proverb-area" id="chapitre-1">
@@ -58,7 +58,7 @@
 
             <section class="proverb-section">
               <h2>Proverbe</h2>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/proverbe1.mp3')">
                 <span>Qui vivra verra</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
 
             <section class="proverb-section">
               <h2>Tag</h2>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/tag1.mp3')">
                 <span>Tag 1</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/tag2.mp3')">
                 <span>Tag 2</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/tag3.mp3')">
                 <span>Tag 3</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@
 
             <section class="proverb-section">
               <h2>Complétez l'exercice</h2>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/phrase1.mp3')">
                 <span>Phrase 1</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@
                   </svg>
                 </span>
               </button>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/phrase2.mp3')">
                 <span>Phrase 2</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@
 
             <section class="proverb-section">
               <h2>Et vous ?</h2>
-              <button class="audio-line" type="button">
+              <button class="audio-line" type="button" onclick="playSound('audio/et-vous.mp3')">
                 <span>Phrase sur vous</span>
                 <span class="audio-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +130,7 @@
           </div>
 
           <div class="proverb-nav proverb-nav-right">
-            <a href="livres1-proverbe2.html" class="arrow-button" aria-label="Proverbe suivant">→</a>
+            <a href="../proverbe2/proverbe2.html" class="arrow-button" aria-label="Proverbe suivant">→</a>
           </div>
         </div>
       </section>
@@ -157,5 +157,7 @@
       </div>
     </section>
   </footer>
+
+  <script src="../../script.js"></script>
 </body>
 </html>
