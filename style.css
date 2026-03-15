@@ -74,7 +74,10 @@ a {
 
 .action-button,
 .social-button,
-.dropdown-item {
+.dropdown-item,
+.chapter-button,
+.audio-line,
+.arrow-button {
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
@@ -99,13 +102,22 @@ a {
 .social-button:hover,
 .social-button:focus-visible,
 .dropdown-item:hover,
-.dropdown-item:focus-visible {
+.dropdown-item:focus-visible,
+.chapter-button:hover,
+.chapter-button:focus-visible,
+.audio-line:hover,
+.audio-line:focus-visible,
+.arrow-button:hover,
+.arrow-button:focus-visible {
   transform: translateY(-2px);
 }
 
 .action-button:focus-visible,
 .social-button:focus-visible,
 .dropdown-item:focus-visible,
+.chapter-button:focus-visible,
+.audio-line:focus-visible,
+.arrow-button:focus-visible,
 .dropdown-books summary:focus-visible {
   outline: 2px solid rgba(139, 92, 246, 0.5);
   outline-offset: 2px;
@@ -189,7 +201,8 @@ a {
 }
 
 .bio-section,
-.ad-section {
+.ad-section,
+.proverb-main-card {
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
   box-shadow: var(--shadow);
@@ -256,83 +269,41 @@ a {
   display: block;
 }
 
-.site-footer {
-  padding-bottom: 36px;
-}
-
-.ad-section {
-  padding: 22px;
-  border-radius: 24px;
-}
-
-.ad-center {
+.book-page-header {
+  margin-bottom: 26px;
   text-align: center;
 }
 
-.ad-section p {
-  margin-top: 0;
-  margin-bottom: 14px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.book-page-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
-.ad-wrapper {
+.book-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 3fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.chapter-sidebar {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 24px;
+}
+
+.chapter-button {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-}
-
-.ad-placeholder {
-  width: min(100%, 728px);
-  min-height: 110px;
-  border-radius: 18px;
-  border: 1px dashed rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.025);
-}
-
-@media (max-width: 640px) {
-  .top-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .dropdown-books,
-  .action-button {
-    width: 100%;
-  }
-
-  .action-button {
-    min-width: 0;
-  }
-
-  .dropdown-menu {
-    position: static;
-    margin-top: 10px;
-  }
-
-  .separator {
-    margin: 24px 0 28px;
-  }
-
-  .bio-section,
-  .ad-section {
-    border-radius: 22px;
-  }
-
-  .bio-section {
-    padding: 22px;
-  }
-
-  .social-links {
-    justify-content: stretch;
-  }
-
-  .social-button {
-    width: 100%;
-  }
-
-  .ad-placeholder {
-    min-height: 90px;
-  }
-}
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #191919 0%, #101010 100%);
+  color: var(--text);
+  font-weight:
