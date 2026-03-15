@@ -6,85 +6,156 @@
   <title>Livre 1 – SoundBook</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- AdSense si besoin plus tard -->
+  <!-- AdSense: remplace ton Publisher ID avant mise en ligne -->
   <!--
   <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
     crossorigin="anonymous"></script>
   -->
 </head>
-<body class="book-page">
-
-  <header class="topbar">
-    <a href="index.html" class="back-link">← Accueil</a>
-    <h1>Livre 1</h1>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">SoundBook</h1>
   </header>
 
-  <main class="content">
-    <section class="card">
-      <h2>Proverbe</h2>
-      <p class="intro">
-        Ce livre présente un proverbe, ses mots-clés, un exercice audio
-        et une question finale.
-      </p>
-      <button class="audio-btn" data-audio="audio/proverbe1.mp3">
-        Écouter : Qui vivra verra
-      </button>
+  <main class="main-content">
+    <section class="top-actions" aria-label="Navigation principale">
+      <details class="dropdown-books">
+        <summary class="action-button dropdown-button">Livres</summary>
+        <div class="dropdown-menu">
+          <a href="livres1.html" class="dropdown-item">Livre 1</a>
+          <a href="livres2.html" class="dropdown-item">Livre 2</a>
+          <a href="livres3.html" class="dropdown-item">Livre 3</a>
+        </div>
+      </details>
+
+      <a href="achat.html" class="action-button action-button-primary">Achat</a>
+      <a href="contact.html" class="action-button action-button-secondary">Contact</a>
     </section>
 
-    <section class="card">
-      <h2>Tags</h2>
-      <div class="button-row">
-        <button class="audio-btn" data-audio="audio/tag1.mp3">Tag 1</button>
-        <button class="audio-btn" data-audio="audio/tag2.mp3">Tag 2</button>
-        <button class="audio-btn" data-audio="audio/tag3.mp3">Tag 3</button>
-      </div>
+    <div class="separator" aria-hidden="true"></div>
+
+    <section class="book-page-header">
+      <h2 class="book-page-title">Livre 1</h2>
     </section>
 
-    <section class="card">
-      <h2>Complétez l'exercice</h2>
-      <div class="button-row">
-        <button class="audio-btn" data-audio="audio/phrase1.mp3">Phrase 1</button>
-        <button class="audio-btn" data-audio="audio/phrase2.mp3">Phrase 2</button>
-      </div>
-    </section>
+    <section class="book-layout">
+      <aside class="chapter-sidebar" aria-label="Liste des chapitres">
+        <a href="#chapitre-1" class="chapter-button">Chapitre 1</a>
+        <a href="#chapitre-2" class="chapter-button">Chapitre 2</a>
+        <a href="#chapitre-3" class="chapter-button">Chapitre 3</a>
+        <a href="#chapitre-4" class="chapter-button">Chapitre 4</a>
+      </aside>
 
-    <section class="card">
-      <h2>Et vous ?</h2>
-      <button class="audio-btn" data-audio="audio/et-vous.mp3">
-        Écouter la question
-      </button>
-    </section>
+      <section class="proverb-area" id="chapitre-1">
+        <div class="proverb-header-row">
+          <div class="proverb-nav proverb-nav-left proverb-nav-disabled" aria-hidden="true">
+            <span class="arrow-button arrow-button-disabled">←</span>
+          </div>
 
-    <section class="card">
-      <h2>Lecteur</h2>
-      <audio id="audio-player" controls preload="none"></audio>
-      <p id="now-playing">Aucun audio en lecture.</p>
-    </section>
+          <div class="proverb-main-card">
+            <h1 class="proverb-title">Qui vivra verra</h1>
 
-    <nav class="nav-books">
-      <a href="index.html" class="nav-link">Accueil</a>
-      <a href="livres2.html" class="nav-link">Livre suivant</a>
-    </nav>
+            <section class="proverb-section">
+              <h2>Proverbe</h2>
+              <button class="audio-line" type="button">
+                <span>Qui vivra verra</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+            </section>
 
-    <section class="card ad-card">
-      <p class="ad-title">Publicité</p>
+            <section class="proverb-section">
+              <h2>Tag</h2>
+              <button class="audio-line" type="button">
+                <span>Tag 1</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+              <button class="audio-line" type="button">
+                <span>Tag 2</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+              <button class="audio-line" type="button">
+                <span>Tag 3</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+            </section>
 
-      <!-- Bloc pub plus tard -->
-      <!--
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXX"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      -->
+            <section class="proverb-section">
+              <h2>Complétez l'exercice</h2>
+              <button class="audio-line" type="button">
+                <span>Phrase 1</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+              <button class="audio-line" type="button">
+                <span>Phrase 2</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+            </section>
+
+            <section class="proverb-section">
+              <h2>Et vous ?</h2>
+              <button class="audio-line" type="button">
+                <span>Phrase sur vous</span>
+                <span class="audio-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 3.23v17.54a1 1 0 0 1-1.64.77L6.91 17H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3.91l5.45-4.54A1 1 0 0 1 14 3.23Zm3.54 3.05a1 1 0 0 1 1.41 0 8 8 0 0 1 0 11.31 1 1 0 1 1-1.41-1.41 6 6 0 0 0 0-8.49 1 1 0 0 1 0-1.41Zm-2.83 2.82a1 1 0 0 1 1.42 0 4 4 0 0 1 0 5.66 1 1 0 0 1-1.42-1.41 2 2 0 0 0 0-2.84 1 1 0 0 1 0-1.41Z"/>
+                  </svg>
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <div class="proverb-nav proverb-nav-right">
+            <a href="livres1-proverbe2.html" class="arrow-button" aria-label="Proverbe suivant">→</a>
+          </div>
+        </div>
+      </section>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <section class="ad-section ad-center" aria-label="Publicité">
+      <p>Publicité</p>
+      <div class="ad-wrapper">
+        <!-- Remplace data-ad-client et data-ad-slot -->
+        <!--
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        -->
+        <div class="ad-placeholder"></div>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
