@@ -1,37 +1,48 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>SoundBook</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoundBook</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AdSense si besoin plus tard -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
 </head>
+<body class="home-page">
 
-<body>
+  <header class="hero">
+    <h1>SoundBook</h1>
+    <p>Choisissez un livre audio à ouvrir</p>
+  </header>
 
-<h1>SoundBook</h1>
+  <main class="library">
+    <a class="book-card" href="livres1.html">
+      <span class="book-number">Livre 1</span>
+      <h2>Proverbes – Niveau 1</h2>
+      <p>Écoute, tags, exercices et réflexion.</p>
+    </a>
 
-<h2>Proverbe</h2>
-<button onclick="playSound('proverbe1')">
-Qui vivra verra
-</button>
+    <a class="book-card" href="livres2.html">
+      <span class="book-number">Livre 2</span>
+      <h2>Proverbes – Niveau 2</h2>
+      <p>Nouvelle série de contenus audio.</p>
+    </a>
 
-<h2>Tag</h2>
-<button onclick="playSound('tag1')">Tag 1</button>
-<button onclick="playSound('tag2')">Tag 2</button>
-<button onclick="playSound('tag3')">Tag 3</button>
+    <a class="book-card" href="livres3.html">
+      <span class="book-number">Livre 3</span>
+      <h2>Proverbes – Niveau 3</h2>
+      <p>Suite du parcours SoundBook.</p>
+    </a>
+  </main>
 
-<h2>Complétez l'exercice</h2>
-<button onclick="playSound('phrase1')">Phrase 1</button>
-<button onclick="playSound('phrase2')">Phrase 2</button>
-
-<h2>Et vous ?</h2>
-<button onclick="playSound('Et vous ?')">
-Et vous?
-</button>
-
-
-<script src="script.js"></script>
+  <footer class="footer">
+    <p>© SoundBook</p>
+  </footer>
 
 </body>
 </html>
