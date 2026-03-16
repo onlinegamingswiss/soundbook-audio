@@ -6,14 +6,14 @@
   <details class="dropdown-books">
     <summary class="action-button dropdown-button">Livres</summary>
     <div class="dropdown-menu">
-      <a href="/livres1/proverbe1/proverbe1.html" class="dropdown-item">Livre 1</a>
-      <a href="/livres2/proverbe1/proverbe1.html" class="dropdown-item">Livre 2</a>
-      <a href="/livres3/proverbe1/proverbe1.html" class="dropdown-item">Livre 3</a>
+      <a href="{{ '/livres1/proverbe1/proverbe1.html' | relative_url }}" class="dropdown-item">Livre 1</a>
+      <a href="{{ '/livres1/proverbe2/proverbe2.html' | relative_url }}" class="dropdown-item">Livre 2</a>
+      <a href="{{ '/livres2/proverbe1/proverbe1.html' | relative_url }}" class="dropdown-item">Autre livre</a>
     </div>
   </details>
 
-  <a href="/achat.html" class="action-button action-button-primary">Achat</a>
-  <a href="/index.html#contact" class="action-button action-button-secondary">Contact</a>
+  <a href="{{ '/achat.html' | relative_url }}" class="action-button action-button-primary">Achat</a>
+  <a href="{{ '/index.html#contact' | relative_url }}" class="action-button action-button-secondary">Contact</a>
 </section>
 
 <div class="separator" aria-hidden="true"></div>
