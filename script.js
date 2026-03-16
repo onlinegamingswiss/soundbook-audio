@@ -14,7 +14,9 @@ async function loadChapterSidebar() {
 
 function playSound(src) {
   const audio = new Audio(src);
-  audio.play();
+  audio.play().catch((error) => {
+    console.error("Lecture audio bloquée :", error);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
