@@ -1,3 +1,312 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050505;
+  --surface: #111111;
+  --surface-soft: #181818;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #f5f5f5;
+  --muted: #b5b5b5;
+  --accent: #8b5cf6;
+  --accent-dark: #6d28d9;
+  --accent-soft: rgba(139, 92, 246, 0.16);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.42);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+  --max-width: 920px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(139, 92, 246, 0.15), transparent 26%),
+    linear-gradient(180deg, #070707 0%, #030303 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header,
+.main-content,
+.site-footer {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.main-content {
+  padding-bottom: 40px;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.action-button,
+.social-button,
+.dropdown-item,
+.chapter-button,
+.audio-line,
+.arrow-button {
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #1a1a1a 0%, #101010 100%);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.action-button:hover,
+.action-button:focus-visible,
+.social-button:hover,
+.social-button:focus-visible,
+.dropdown-item:hover,
+.dropdown-item:focus-visible,
+.chapter-button:hover,
+.chapter-button:focus-visible,
+.audio-line:hover,
+.audio-line:focus-visible,
+.arrow-button:hover,
+.arrow-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.action-button:focus-visible,
+.social-button:focus-visible,
+.dropdown-item:focus-visible,
+.chapter-button:focus-visible,
+.audio-line:focus-visible,
+.arrow-button:focus-visible,
+.dropdown-books summary:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+.action-button-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.action-button-secondary {
+  background: linear-gradient(180deg, #1c1c1c 0%, #131313 100%);
+}
+
+.dropdown-books {
+  position: relative;
+}
+
+.dropdown-books summary {
+  list-style: none;
+}
+
+.dropdown-books summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-button {
+  padding-right: 46px;
+  position: relative;
+}
+
+.dropdown-button::after {
+  content: "▾";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #dacfff;
+}
+
+.dropdown-books[open] .dropdown-button {
+  background: linear-gradient(180deg, #1f1f1f 0%, #141414 100%);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  min-width: 220px;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-strong);
+  background: rgba(15, 15, 15, 0.98);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+  background: var(--accent-soft);
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  margin: 28px 0 34px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.14) 15%, rgba(255, 255, 255, 0.14) 85%, transparent 100%);
+}
+
+.bio-section,
+.ad-section,
+.proverb-main-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  box-shadow: var(--shadow);
+}
+
+.bio-section {
+  padding: 30px;
+  border-radius: var(--radius-xl);
+}
+
+.bio-section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.bio-section p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+.social-button:hover,
+.social-button:focus-visible {
+  background: var(--accent-soft);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.book-page-header {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.book-page-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.book-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 3fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.chapter-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 24px;
+}
+
+.chapter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #191919 0%, #101010 100%);
+  color: var(--text);
+  font-weight:
 .audio-text-row {
   display: flex;
   align-items: center;
