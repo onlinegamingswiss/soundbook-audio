@@ -1,14 +1,22 @@
-const bookSelect = document.getElementById("bookSelect");
+async function loadChapterSidebar() {
+  const container = document.getElementById("chapter-sidebar");
+  if (!container) return;
 
-if (bookSelect) {
-  bookSelect.addEventListener("change", function () {
-    if (this.value) {
-      window.location.href = this.value;
-    }
-  });
+  try {
+    const response = await fetch("../sidebar.html");
+    if (!response.ok) throw new Error("Impossible de charger sidebar.html");
+    const html = await response.text();
+    container.innerHTML = html;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function playSound(src) {
   const audio = new Audio(src);
   audio.play();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadChapterSidebar();
+});
