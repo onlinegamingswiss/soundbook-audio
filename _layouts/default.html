@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <section class="ad-section ad-center" aria-label="Publicité">
+      <p>Publicité</p>
+      <div class="ad-wrapper">
+        <div class="ad-placeholder"></div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
