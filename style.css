@@ -578,14 +578,20 @@ a {
     order: 3;
   }
   .play-btn{
-    border:none;
-    background:none;
-    padding:0;
-    cursor:pointer;
+      all: unset;
+      cursor:pointer;
   }
+  
   .play-btn img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
+      width:60px;
+      height:60px;
+  
+      object-fit:contain;
+  
+      transition:0.3s;
+  }
+  
+  .play-btn img:hover{
+      transform:scale(1.1);
   }
 }
