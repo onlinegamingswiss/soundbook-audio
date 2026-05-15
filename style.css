@@ -577,4 +577,15 @@ a {
   .proverb-nav-right {
     order: 3;
   }
+  .play-btn{
+    border:none;
+    background:none;
+    padding:0;
+    cursor:pointer;
+  }
+  .play-btn img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+  }
 }
