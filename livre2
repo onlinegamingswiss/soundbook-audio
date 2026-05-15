@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Gallery Sound Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    color:#111;
+}
+
+/* PAGE */
+
+.page{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* TITLE */
+
+.header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.header h1{
+    font-size:64px;
+    margin-bottom:20px;
+}
+
+.header p{
+    font-size:20px;
+    line-height:1.6;
+    color:#444;
+}
+
+/* GALLERY GRID */
+
+.gallery{
+    display:grid;
+
+    /* responsive columns */
+    grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));
+
+    gap:50px 40px;
+}
+
+/* CARD */
+
+.card{
+    text-align:center;
+}
+
+/* IMAGE */
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.card img:hover{
+    transform:scale(1.03);
+}
+
+/* PLAY BUTTON */
+
+.play-btn{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+    border:2px solid #222;
+
+    background:white;
+
+    cursor:pointer;
+
+    margin-top:18px;
+    margin-bottom:12px;
+
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.play-btn:hover{
+    background:#111;
+    color:white;
+}
+
+/* LABEL */
+
+.sound-title{
+    font-size:18px;
+    color:#333;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="header">
+        <h1>Gallery</h1>
+
+        <p>
+            Provide a short description of the gallery,
+            highlighting key things.
+        </p>
+    </div>
+
+    <div class="gallery">
+
+        <!-- CARD 1 -->
+        <div class="card">
+
+            <img src="https://picsum.photos/id/237/300/300" alt="">
+
+            <button class="play-btn"
+            onclick="playSound('sound1')">
+                ▶
+            </button>
+
+            <p class="sound-title">Sound 01</p>
+
+            <audio id="sound1">
+                <source src="sound1.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+
+            <img src="https://picsum.photos/id/1025/300/300" alt="">
+
+            <button class="play-btn"
+            onclick="playSound('sound2')">
+                ▶
+            </button>
+
+            <p class="sound-title">Sound 02</p>
+
+            <audio id="sound2">
+                <source src="sound2.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+
+            <img src="https://picsum.photos/id/1015/300/300" alt="">
+
+            <button class="play-btn"
+            onclick="playSound('sound3')">
+                ▶
+            </button>
+
+            <p class="sound-title">Sound 03</p>
+
+            <audio id="sound3">
+                <source src="sound3.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+
+            <img src="https://picsum.photos/id/1069/300/300" alt="">
+
+            <button class="play-btn"
+            onclick="playSound('sound4')">
+                ▶
+            </button>
+
+            <p class="sound-title">Sound 04</p>
+
+            <audio id="sound4">
+                <source src="sound4.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+
+            <img src="https://picsum.photos/id/1040/300/300" alt="">
+
+            <button class="play-btn"
+            onclick="playSound('sound5')">
+                ▶
+            </button>
+
+            <p class="sound-title">Sound 05</p>
+
+            <audio id="sound5">
+                <source src="sound5.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function playSound(soundId){
+
+    const sound = document.getElementById(soundId);
+
+    sound.currentTime = 0;
+
+    sound.play();
+}
+
+</script>
+
+</body>
+</html>
